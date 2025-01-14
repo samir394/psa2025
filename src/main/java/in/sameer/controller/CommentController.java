@@ -15,6 +15,7 @@ public class CommentController {
 
     public CommentController(PostRepository postRepository, CommentRepository commentRepository){
         this.postRepository=postRepository;
+
         this.commentRepository=commentRepository;
     }
     @PostMapping
@@ -28,6 +29,7 @@ public class CommentController {
         commentRepository.save(comment);
 
         return "Comment created successfully";
+
 
     }
 
